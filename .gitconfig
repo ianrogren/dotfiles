@@ -1,0 +1,8 @@
+[includeIf "gitdir:~/code/github/"]
+    path = ~/dotfiles/.gitconfig-personal
+[includeIf "gitdir:~/.cfg/"]
+    path = ~/dotfiles/.gitconfig-personal
+[includeIf "gitdir:~/code/bitbucket/"]
+    path = ~/dotfiles/.gitcofig-work
+[core]
+	editor = nvim
