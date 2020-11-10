@@ -1,6 +1,21 @@
-export ZSH="/home/ian/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
+
+## WLS2
+# plugins=(zsh-syntax-highlighting zsh-autosuggestions zsh-completions)
+
+## Macbook
+export PATH="/usr/local/sbin:$PATH"
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+
+  autoload -Uz compinit
+  compinit
+fi
+
+## ZSH Settings
 ZSH_THEME="spaceship"
-plugins=(zsh-syntax-highlighting zsh-autosuggestions zsh-completions)
 autoload -U compinit && compinit
 source $ZSH/oh-my-zsh.sh
 
