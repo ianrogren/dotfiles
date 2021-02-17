@@ -6,3 +6,6 @@
     path = ~/dotfiles/.gitcofig-work
 [core]
 	editor = nvim
+[user]
+	name = Ian Rogren
+	email = ian.rogren@varian.com

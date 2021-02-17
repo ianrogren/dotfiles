@@ -1,0 +1,39 @@
+# Application Directory
+# cask_args appdir: '/Applications:'
+
+tap 'homebrew/bundle'
+tap 'homebrew/cask'
+tap 'homebrew/core'
+tap 'homebrew/cask-fonts'
+
+brew 'bat'
+brew 'git'
+brew 'wget'
+brew 'openssl'
+brew 'zsh'
+brew 'node'
+brew 'neovim'
+brew 'rbenv'
+
+# Apps
+cask 'spotify'
+cask 'firefox'
+cask 'docker'
+cask 'zoom'
+cask 'vlc'
+cask 'iterm2'
+cask 'lando'
+cask 'adobe-creative-cloud'
+cask 'alfred'
+
+# Microsoft
+cask 'visual-studio-code'
+cask 'microsoft-outlook'
+cask 'microsoft-word'
+cask 'microsoft-excel'
+cask 'microsoft-powerpoint'
+
+# Fonts
+cask 'font-hack-nerd-font'
+cask 'font-fira-code'
+cask 'font-meslo-lg-nerd-font'

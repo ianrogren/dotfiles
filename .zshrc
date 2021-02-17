@@ -7,8 +7,8 @@ export ZSH="$HOME/.oh-my-zsh"
 
 ## Macbook
   export PATH="/usr/local/sbin:$PATH"
-  source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-  source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+  source $ZSH/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+  source $ZSH/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
   if type brew &>/dev/null; then
     FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
@@ -27,6 +27,11 @@ ZSH_THEME="spaceship"
 autoload -U compinit && compinit
 source $ZSH/oh-my-zsh.sh
 
-if [ -f ~/dotfiles/.profile ]; then
-    . ~/dotfiles/.profile
+if [ -f ~/.dotfiles/.profile ]; then
+    . ~/.dotfiles/.profile
 fi
+
+# BEGIN SNIPPET: Platform.sh CLI configuration
+HOME=${HOME:-'/Users/ian'}
+export PATH="$HOME/"'.platformsh/bin':"$PATH"
+if [ -f "$HOME/"'.platformsh/shell-config.rc' ]; then . "$HOME/"'.platformsh/shell-config.rc'; fi # END SNIPPET
