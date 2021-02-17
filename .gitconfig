@@ -7,7 +7,6 @@
 	pager = delta
 [github]
 	user = ianrogren
-	token = token
 [color]
 	ui = auto
 [color "branch"]
