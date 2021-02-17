@@ -1,0 +1,7 @@
+# Work
+cask 'adobe-creative-cloud'
+cask 'microsoft-outlook'
+cask 'microsoft-word'
+cask 'microsoft-excel'
+cask 'microsoft-powerpoint'
+cask 'lando'

@@ -11,7 +11,10 @@ brew 'git'
 brew 'wget'
 brew 'openssl'
 brew 'zsh'
+brew 'zsh-autosuggestions'
+brew 'zsh-syntax-highlighting'
 brew 'node'
+brew 'yarn'
 brew 'neovim'
 brew 'rbenv'
 
@@ -21,19 +24,11 @@ cask 'firefox'
 cask 'docker'
 cask 'zoom'
 cask 'vlc'
-cask 'iterm2'
-cask 'lando'
-cask 'adobe-creative-cloud'
-cask 'alfred'
-
-# Microsoft
 cask 'visual-studio-code'
-cask 'microsoft-outlook'
-cask 'microsoft-word'
-cask 'microsoft-excel'
-cask 'microsoft-powerpoint'
+cask 'alfred'
 
 # Fonts
 cask 'font-hack-nerd-font'
 cask 'font-fira-code'
 cask 'font-meslo-lg-nerd-font'
+
