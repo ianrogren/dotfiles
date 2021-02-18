@@ -1,4 +1,5 @@
 #!/bin/bash
+
 RED='\033[0;31m'
 BLUE='\033[0;34m'
 GREEN='\033[0;32m'
@@ -24,8 +25,6 @@ setupBrewfile() {
 			echo -e "\\n${BLUE}+++ ${BOLD}Creating personal brewfile... ${NC}\\n"
 		fi
 		echo -e "\\n${BLUE}+++ ${BOLD}Building brew bundle... ${NC}\\n"
-		cd || brew bundle install
-		brew update
 	else
 		echo -e "\\n${RED}ERROR: ${BOLD}Missing Brewfile. ${NC}\\n"
 	fi
@@ -49,4 +48,4 @@ setupFolderPermissions () {
 updateXcode
 setupHomebrew
 setupBrewfile $1
-setupFolderPermissions
+
