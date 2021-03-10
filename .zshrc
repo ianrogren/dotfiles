@@ -6,23 +6,20 @@ export ZSH="$HOME/.oh-my-zsh"
 
 
 ## Macbook
-  export PATH="/usr/local/sbin:$PATH"
-  # source $ZSH/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-  # source $ZSH/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+export PATH="/usr/local/sbin:$PATH"
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-  source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-  source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+  autoload -Uz compinit
+  compinit
+fi
 
-  if type brew &>/dev/null; then
-    FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
-    autoload -Uz compinit
-    compinit
-  fi
+export PATH="/usr/local/opt/php@7.3/bin:$PATH"
+export PATH="/usr/local/opt/php@7.3/sbin:$PATH"
 
-  export PATH="/usr/local/opt/php@7.3/bin:$PATH"
-  export PATH="/usr/local/opt/php@7.3/sbin:$PATH"
-
-  eval "$(rbenv init -)"
+eval "$(rbenv init -)"
 
 
 ## ZSH Settings

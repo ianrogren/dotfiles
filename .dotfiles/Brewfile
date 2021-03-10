@@ -26,6 +26,7 @@ cask 'zoom'
 cask 'vlc'
 cask 'visual-studio-code'
 cask 'alfred'
+cask 'brave-browser'
 
 # Fonts
 cask 'font-hack-nerd-font'
