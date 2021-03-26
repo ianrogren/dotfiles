@@ -17,6 +17,7 @@ brew 'node'
 brew 'yarn'
 brew 'neovim'
 brew 'rbenv'
+brew 'ccleaner'
 
 # Apps
 cask 'spotify'
