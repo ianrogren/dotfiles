@@ -78,19 +78,12 @@ source $(dirname $(gem which colorls))/tab_complete.sh
 
 HOME=${HOME:-'/home/ian'}
 
+# Task Warrior
+export TASKRC='~/.dotfiles/.taskrc'
+
 # Platform
 export PATH="$HOME/"'.platformsh/bin':"$PATH"
 if [ -f "$HOME/"'.platformsh/shell-config.rc' ]; then
     . "$HOME/"'.platformsh/shell-config.rc';
 fi
-
-###############################################################################
-# Functions
-###############################################################################
-
-man() {
-  /usr/bin/man $* | \
-    col -b | \
-    nvim -R -c 'set ft=man nomod nolist' -
-}
 
