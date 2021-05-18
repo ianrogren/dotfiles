@@ -10,6 +10,12 @@ alias drupalcs="phpcs --standard=Drupal --extensions='php,module,inc,install,tes
 alias drupalcsp="phpcs --standard=DrupalPractice --extensions='php,module,inc,install,test,profile,theme' --ignore='node_modules,bower_components,vendor'"
 alias drupalcbf="phpcbf --standard=Drupal --extensions='php,module,inc,install,test,profile,theme' --ignore='node_modules,bower_components,vendor'"
 
+# Drupal Lando Aliases
+alias lcs="lando phpcs --standard=Drupal --extensions='php,module,inc,install,test,profile,theme,info' --ignore='node_modules,bower_components,vendor'"
+alias lcsp="lando phpcs --standard=DrupalPractice --extensions='php,module,inc,install,test,profile,theme' --ignore='node_modules,bower_components,vendor'"
+alias lcbf="lando phpcbf --standard=Drupal --extensions='php,module,inc,install,test,profile,theme' --ignore='node_modules,bower_components,vendor'"
+alias lcr="lando drush cr"
+
 # Github Config Webpack
 alias webpack:build="cd ~/code/github/webpack-config && npm run build"
 
@@ -86,4 +92,3 @@ export PATH="$HOME/"'.platformsh/bin':"$PATH"
 if [ -f "$HOME/"'.platformsh/shell-config.rc' ]; then
     . "$HOME/"'.platformsh/shell-config.rc';
 fi
-
