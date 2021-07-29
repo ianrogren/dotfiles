@@ -20,6 +20,7 @@ brew 'rbenv'
 brew 'task'
 brew 'tldr'
 brew 'htop'
+brew 'composer'
 
 # Apps
 cask 'spotify'
@@ -31,9 +32,9 @@ cask 'visual-studio-code'
 cask 'alfred'
 cask 'brave-browser'
 cask 'ccleaner'
+cask 'sequel-pro'
 
 # Fonts
 cask 'font-hack-nerd-font'
 cask 'font-fira-code'
 cask 'font-meslo-lg-nerd-font'
-

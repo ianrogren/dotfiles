@@ -76,6 +76,9 @@ alias config='/usr/bin/git --git-dir=$HOME/.config/ --work-tree=$HOME'
 # Tmux
 alias tm='tmux -f ~/.tmux.config'
 
+# Update Brew Bundle
+alias update-bundle='sh ~/.dotfiles/scripts/update-bundle.sh'
+
 ###############################################################################
 # Environment
 ###############################################################################
@@ -83,6 +86,9 @@ alias tm='tmux -f ~/.tmux.config'
 source $(dirname $(gem which colorls))/tab_complete.sh
 
 HOME=${HOME:-'/home/ian'}
+
+# Composer
+export PATH=~/.composer/vendor/bin:$PATH
 
 # Task Warrior
 export TASKRC='~/.dotfiles/.taskrc'
