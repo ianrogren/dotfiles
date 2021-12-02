@@ -1,37 +1,31 @@
-DEVICE="macbook" # wsl2 or macbook
-export ZSH="$HOME/.oh-my-zsh"
+HOME=${HOME:-/Users/ian}
 
-## WLS2
-# plugins=(zsh-syntax-highlighting zsh-autosuggestions zsh-completions)
+export PATH=$HOME/usr/local/Cellar:$PATH
+export PATH=$HOME/.composer/vendor/bin:$PATH
+export PATH=$HOME/.platformsh/bin:$PATH
+export PATH=/usr/local/sbin:$PATH
+export PATH=/usr/local/opt/php@7.3/bin:$PATH
+export PATH=/usr/local/opt/php@7.3/sbin:$PATH
 
+export ZSH=$HOME/.oh-my-zsh
+export TASKRC=$HOME/.dotfiles/.taskrc
 
-## Macbook
-export PATH="/usr/local/sbin:$PATH"
+source $ZSH/oh-my-zsh.sh
+source $HOME/.oh-my-zsh/custom/themes/spaceship.zsh-theme
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-if type brew &>/dev/null; then
-  FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
-  autoload -Uz compinit
-  compinit
-fi
-
-export PATH="/usr/local/opt/php@7.3/bin:$PATH"
-export PATH="/usr/local/opt/php@7.3/sbin:$PATH"
+source $(dirname $(gem which colorls))/tab_complete.sh
 
 eval "$(rbenv init -)"
 
-
-## ZSH Settings
-ZSH_THEME="spaceship"
 autoload -U compinit && compinit
-source $ZSH/oh-my-zsh.sh
 
-if [ -f ~/.dotfiles/.profile ]; then
-    . ~/.dotfiles/.profile
+# Dotfiles
+if [ -f $HOME/.dotfiles/.profile ]; then
+    . $HOME/.dotfiles/.profile
 fi
 
-# BEGIN SNIPPET: Platform.sh CLI configuration
-HOME=${HOME:-'/Users/ian'}
-export PATH="$HOME/"'.platformsh/bin':"$PATH"
-if [ -f "$HOME/"'.platformsh/shell-config.rc' ]; then . "$HOME/"'.platformsh/shell-config.rc'; fi # END SNIPPET
+# Platform
+if [ -f $HOME/.platformsh/shell-config.rc ]; then
+    . $HOME/.platformsh/shell-config.rc;
+fi
