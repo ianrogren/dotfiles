@@ -16,6 +16,13 @@ alias lcsp="lando phpcs --standard=DrupalPractice --extensions='php,module,inc,i
 alias lcbf="lando phpcbf --standard=Drupal --extensions='php,module,inc,install,test,profile,theme' --ignore='node_modules,bower_components,vendor'"
 alias lcr="lando drush cr"
 
+# Update database aliases
+alias masterdb="scp database.sql.gz uhm6qb4pamz66-master-7rqtwti--app@ssh.us-2.platform.sh:/tmp"
+alias stagingdb="scp database.sql.gz 1.ent-uhm6qb4pamz66-staging-5em2ouy@ssh.us-2.platform.sh:/tmp"
+
+# Git Aliases
+alias gfc="git fetch && git checkout"
+
 # Github Config Webpack
 alias webpack:build="cd ~/code/github/webpack-config && npm run build"
 
@@ -47,17 +54,6 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
-# some more ls aliases
-# alias ll='ls -alF'
-# alias la='ls -A'
-# alias l='ls -CF'
-
-# Folders
-alias docs='cd /mnt/c/Users/Ian'
-alias down='cd /mnt/d/Downloads'
-alias ff='cd /mnt/c/Users/Ian/AppData/Roaming/Mozilla/Firefox/Profiles/kqucoav0.default-release/chrome'
-alias dot='cd ~/dotfiles'
-
 # Search
 alias llf='ll | grep -i'
 
@@ -86,6 +82,9 @@ alias update-bundle='sh ~/.dotfiles/scripts/update-bundle.sh'
 source $(dirname $(gem which colorls))/tab_complete.sh
 
 HOME=${HOME:-'/home/ian'}
+
+# Homebrew
+export PATH=~/usr/local/Cellar:$PATH
 
 # Composer
 export PATH=~/.composer/vendor/bin:$PATH

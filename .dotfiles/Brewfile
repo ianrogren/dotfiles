@@ -21,6 +21,7 @@ brew 'task'
 brew 'tldr'
 brew 'htop'
 brew 'composer'
+brew 'php@7.3'
 
 # Apps
 cask 'spotify'
